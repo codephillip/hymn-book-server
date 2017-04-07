@@ -5,8 +5,8 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from myapp.models import Hymn
-from myapp.serializers import HymnSerializer
+from myapp.models import Hymn, Category
+from myapp.serializers import HymnSerializer, CategorySerializer
 
 
 def index(request):
@@ -16,6 +16,11 @@ def index(request):
 @api_view(['GET', 'POST'])
 def hymns_route(request):
     return master_route(request, 'data', Hymn, HymnSerializer)
+
+
+@api_view(['GET', 'POST'])
+def categorys_route(request):
+    return master_route(request, 'categorys', Category, CategorySerializer)
 
 
 def master_route(request, tableName, Table, TableSerializer):
