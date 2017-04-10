@@ -15,7 +15,7 @@ def index(request):
 
 @api_view(['GET', 'POST'])
 def hymns_route(request):
-    return master_route(request, 'data', Hymn, HymnSerializer)
+    return master_route(request, 'hymns', Hymn, HymnSerializer)
 
 
 @api_view(['GET', 'POST'])
