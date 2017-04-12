@@ -1,0 +1,8 @@
+{
+  "name": "Hymnbook api",
+  "description": "Api for the Hymnbook",
+  "image": "heroku/python",
+  "repository": "https://github.com/codephillip/hymn-book-server",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ]
+}
