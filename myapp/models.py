@@ -15,4 +15,4 @@ class Hymn(models.Model):
     category = models.ForeignKey(Category)
 
     def __str__(self):
-        return self.title.encode('utf-8')
+        return str(self.number) + " " + self.title.encode('utf-8')
