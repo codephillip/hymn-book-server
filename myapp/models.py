@@ -5,7 +5,7 @@ class Category(models.Model):
     name = models.CharField(max_length=400)
 
     def __str__(self):
-        return self.name
+        return self.name.encode('utf-8')
 
 
 class Hymn(models.Model):
@@ -15,4 +15,4 @@ class Hymn(models.Model):
     category = models.ForeignKey(Category)
 
     def __str__(self):
-        return self.title
+        return self.title.encode('utf-8')
